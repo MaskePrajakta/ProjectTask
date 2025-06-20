@@ -17,6 +17,12 @@ public class StudentController {
 	StudentServiceInter ssi;
 	
 	
+	@PostMapping("/student")
+	public void addStudentData(@RequestBody Student s) {
+		ssi.addStudent(s);
+		
+	}
+
 		
 	
 	
