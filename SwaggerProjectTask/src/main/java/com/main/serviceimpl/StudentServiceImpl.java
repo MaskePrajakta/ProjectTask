@@ -29,6 +29,13 @@ public class StudentServiceImpl implements StudentServiceInter {
 		return sr.findById(rollno).get();
 	}
 
+
+	@Override
+	public void deleteStudent(int rollno) {
+		// TODO Auto-generated method stub
+		 sr.deleteById(rollno);
+	}
+
 	
 	
 }
