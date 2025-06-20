@@ -15,6 +15,12 @@ public class StudentServiceImpl implements StudentServiceInter {
 	@Autowired
 	StudentRepository sr;
 
+	@Override
+	public void addStudent(Student s) {
+		sr.save(s);
+		
+	}
+
 	
 	
 	
