@@ -16,7 +16,19 @@ public class StudentServiceImpl implements StudentServiceInter {
 	StudentRepository sr;
 
 	
-	
+	@Override
+	public void addStudent(Student s) {
+		sr.save(s);
+		
+	}
+
+
+	@Override
+	public Student getStudent(int rollno) {
+		// TODO Auto-generated method stub
+		return sr.findById(rollno).get();
+	}
+
 	
 	
 }
