@@ -22,6 +22,13 @@ public class StudentServiceImpl implements StudentServiceInter {
 		
 	}
 
+
+	@Override
+	public Student getStudent(int rollno) {
+		// TODO Auto-generated method stub
+		return sr.findById(rollno).get();
+	}
+
 	
 	
 }
