@@ -8,6 +8,8 @@ public interface StudentServiceInter {
 
 	Student getStudent(int rollno);
 
+	void deleteStudent(int rollno);
+
 
 	
 
