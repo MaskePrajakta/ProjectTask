@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 dir('SwaggerProjectTask') {
-                    bat 'java -jar target\\*.jar'
+                   bat 'java -jar target\\SwaggerProjectTask-0.0.1-SNAPSHOT.war'
                 }
             }
         }
