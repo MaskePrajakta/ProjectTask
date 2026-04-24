@@ -16,25 +16,33 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                dir('SwaggerProjectTask') {
+                    bat 'mvn clean compile'
+                }
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
+                dir('SwaggerProjectTask') {
+                    bat 'mvn test'
+                }
             }
         }
 
         stage('Package') {
             steps {
-                bat 'mvn package -DskipTests'
+                dir('SwaggerProjectTask') {
+                    bat 'mvn package -DskipTests'
+                }
             }
         }
 
         stage('Deploy') {
             steps {
-                bat 'java -jar target\\*.jar'
+                dir('SwaggerProjectTask') {
+                    bat 'java -jar target\\*.jar'
+                }
             }
         }
     }
